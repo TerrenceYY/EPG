@@ -1,6 +1,11 @@
 import 'package:xml/xml.dart';
 
-const List<String> epgUrl = [
+const List<String> curEpgUrl = [
+  'https://gh-proxy.com/raw.githubusercontent.com/TerrenceYY/EPG/refs/heads/main/assets/epg.xml',
+  'https://raw.githubusercontent.com/TerrenceYY/EPG/refs/heads/main/assets/epg.xml',
+];
+
+const List<String> newEpgUrl = [
   'https://gh-proxy.com/raw.githubusercontent.com/fanmingming/live/main/e.xml',
   'http://epg.51zmt.top:8000/e.xml',
   'https://epg.112114.xyz/pp.xml',
