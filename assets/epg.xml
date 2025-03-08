@@ -303,9 +303,6 @@
     <channel id="纯享4K">
         <display-name lang="zh">纯享4K</display-name>
     </channel>
-
-
-    <!-- 20250307 -->
     <programme channel="CCTV1" start="20250307004700 +0800" stop="20250307011500 +0800">
         <title lang="zh">今日说法-2025-45</title>
     </programme>
@@ -10340,9 +10337,6 @@
     <programme channel="CCTV4K" start="20250307213600 +0800" stop="20250307000000 +0800">
         <title lang="zh">大太平洋</title>
     </programme>
-
-
-    <!-- 20250308 -->
     <programme channel="CCTV1" start="20250308004915 +0800" stop="20250308011735 +0800">
         <title lang="zh">今日说法-2025-46</title>
     </programme>
