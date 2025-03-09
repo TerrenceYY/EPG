@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:epg/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:http/http.dart';
 import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
@@ -275,9 +274,10 @@ class _MyHomePageState extends State<MyHomePage> {
       String filePath = '${tempDir.path}/epg.xml';
 
       File tempFile = File(filePath);
-      Uint8List xmlBytes = Uint8List.fromList(utf8.encode(xmlContent));
-      await tempFile.writeAsBytes(xmlBytes);
-      await Share.shareXFiles([XFile(filePath)], text: '分享的 XML 文件');
+      //Uint8List xmlBytes = Uint8List.fromList(utf8.encode(xmlContent));
+      await tempFile.writeAsString(xmlContent);
+      await Share.shareXFiles([XFile(filePath, mimeType: 'application/xml')],
+          text: '分享的 XML 文件');
 
       Future.delayed(Duration(seconds: 1), () {
         if (tempFile.existsSync()) {
