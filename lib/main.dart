@@ -274,15 +274,13 @@ class _MyHomePageState extends State<MyHomePage> {
       String filePath = '${tempDir.path}/epg.xml';
 
       File tempFile = File(filePath);
-      //Uint8List xmlBytes = Uint8List.fromList(utf8.encode(xmlContent));
       await tempFile.writeAsString(xmlContent);
-      await Share.shareXFiles([XFile(filePath, mimeType: 'application/xml')],
-          text: '分享的 XML 文件');
+      await Share.shareXFiles([XFile(filePath, mimeType: 'application/xml')]);
 
       Future.delayed(Duration(seconds: 1), () {
         if (tempFile.existsSync()) {
           tempFile.deleteSync();
-          showSnackBar('XML 文件已删除: $filePath');
+          showSnackBar('保存成功！ XML 文件已删除: $filePath');
         }
       });
     } catch (e) {
