@@ -250,7 +250,7 @@ class _EpgMorePageState extends State<EpgMorePage> {
   Future<void> shareXmlWithoutSaving(String xmlContent) async {
     try {
       Directory tempDir = await getTemporaryDirectory();
-      String filePath = '${tempDir.path}/epg.xml';
+      String filePath = '${tempDir.path}/epg_more.xml';
 
       File tempFile = File(filePath);
       await tempFile.writeAsString(xmlContent);
